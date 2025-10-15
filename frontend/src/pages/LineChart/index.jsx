@@ -1,5 +1,5 @@
-import Linhas from '../components/LineChart'
-import Cabecalho from '../components/Header'
+import Linhas from '../../components/LineChart'
+import Cabecalho from '../../components/Header'
 
 import { Link } from "react-router-dom"
 

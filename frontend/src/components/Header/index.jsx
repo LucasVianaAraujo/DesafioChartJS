@@ -1,6 +1,6 @@
 import './index.css'
 
-import Frei from '../../../assets/images/Frei.png'
+import Frei from '../../assets/images/Frei.png'
 
 export default function index({ Assunto, Link }) {
     return (

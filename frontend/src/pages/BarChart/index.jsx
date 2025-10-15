@@ -1,5 +1,5 @@
-import BarChart from "../components/BarChart"
-import Cabecalho from '../components/Header'
+import BarChart from "../../components/BarChart"
+import Cabecalho from '../../components/Header'
 
 import { Link } from "react-router-dom"
 

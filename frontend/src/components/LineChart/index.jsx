@@ -1,4 +1,5 @@
 import { Line } from 'react-chartjs-2';
+//importando dentro do Chart.js o tipo linha (Line) e seus elementos derivados 'PointElement' e 'LineElement'
 import { Chart as ChartJS, PointElement, LineElement, LinearScale, BarElement, CategoryScale, Tooltip } from 'chart.js';
 
 ChartJS.register(LinearScale, LineElement, BarElement, PointElement, CategoryScale, Tooltip);
@@ -21,7 +22,7 @@ const arrIncricaoFrei = [
 ]
 
 // formatação que permitirá a leitura dos dados de forma individual e por id
-// autoexplicativo, mas basicamente eu estou puxando o nome do curso e perído na coluna x (Exibição) e o total de inscritos como condição de altura na coluna y (Comparação)
+// é identico ao BarChart, mas dessa vez o x (exibição) só contém um tipo de informação
 const dataIncricoes = arrIncricaoFrei.map(data => ({
     x: data._id,
     y: data.totalAgendamentos
@@ -34,7 +35,7 @@ const data = {
             label: "Incrições 2025",
             data: dataIncricoes,
             backgroundColor: '#87C2FA',
-            borderColor: '#87C2FA',
+            borderColor: '#87C2FA', // cor da linha, é legal utilizar pra não ficar estranho, sem isso a linha fica praticamente invisível
             tension: 0.4, // border-radius das bordas
             parsing: {
                 xAxisKey: 'x',
@@ -59,7 +60,7 @@ const chartOption = {
         tooltip: {
             callbacks: {
                 label: function (context) {
-                    return "Total Agendamentos: " + context.parsed.y;
+                    return "Total Agendamentos: " + context.parsed.y; // retornando o total de agendamentos isolado
                 }
             }
         }
