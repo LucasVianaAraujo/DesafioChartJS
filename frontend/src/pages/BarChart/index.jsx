@@ -13,7 +13,7 @@ export default function Linhas() {
     useEffect(() => {
         async function fetchTotal() {
             try {
-                const resp = await fetch('http://localhost:5001/RenderizarContagem');
+                const resp = await fetch('https://desafiochartjs-2.onrender.com/RenderizarContagem');
                 const data = await resp.json();
                 setInscricoes(data.TotalMatricula);
             }
@@ -30,7 +30,7 @@ export default function Linhas() {
 
     useEffect(() => {
         async function fetchCurso() {
-            const resp = await fetch('http://localhost:5001/CursoMaisEscolhido');
+            const resp = await fetch('https://desafiochartjs-2.onrender.com/CursoMaisEscolhido');
             const data = await resp.json();
             setCurso(data);
         }

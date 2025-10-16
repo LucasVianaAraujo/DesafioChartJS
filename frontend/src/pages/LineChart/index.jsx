@@ -13,7 +13,7 @@ export default function Barras() {
     useEffect(() => {
         async function fetchTotal() {
             try {
-                const resp = await fetch('http://localhost:5001/RenderizarInscricoes');
+                const resp = await fetch('https://desafiochartjs-2.onrender.com/RenderizarInscricoes');
                 const data = await resp.json();
                 setInscricoes(data.TotalMatricula);
             } catch (err) {
@@ -28,7 +28,7 @@ export default function Barras() {
 
     useEffect(() => {
         async function fetchDiaMaisInscricoes() {
-            const resp = await fetch('http://localhost:5001/DiaComMaisInscricoes');
+            const resp = await fetch('https://desafiochartjs-2.onrender.com/DiaComMaisInscricoes');
             const data = await resp.json();
             setPopularidade(data);
         }

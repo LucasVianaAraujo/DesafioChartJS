@@ -34,7 +34,7 @@ export default function () {
     useEffect(() => {
         const Renderizar = async () => {
             try {
-                const resp = await fetch('http://localhost:5001/RenderizarIncricoes')
+                const resp = await fetch('https://desafiochartjs-2.onrender.com/RenderizarIncricoes')
                 const respJson = await resp.json();
 
                 const DadosFormatados = respJson.map(resp => ({

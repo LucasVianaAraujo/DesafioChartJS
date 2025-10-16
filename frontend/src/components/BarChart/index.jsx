@@ -96,7 +96,7 @@ export default function BarChart() {
     useEffect(() => {
         const RenderizarDados = async () => {
             try {
-                const resp = await fetch('http://localhost:5001/RenderizarCursos');
+                const resp = await fetch('https://desafiochartjs-2.onrender.com/RenderizarCursos');
                 const respJson = await resp.json();
 
                 const DadosFormatados = respJson.map(resp => ({
@@ -160,7 +160,7 @@ export default function BarChart() {
 
     // configurações do gráfico
     const chartOption = {
-        resposive: true,
+        responsive: true,
         scales: {
             x: {
                 type: 'category', // tipo texto

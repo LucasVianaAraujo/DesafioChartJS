@@ -8,9 +8,8 @@ import cors from 'cors'
 
 dotenv.config();
 
-const PORT = 5001;
+const PORT = process.env.PORT || 5001
 
-connection();
 
 const api = express();
 api.use(express.json());
@@ -18,4 +17,5 @@ api.use(cors());
 
 AdicionarRotas(api);
 
+connection();
 api.listen(PORT, () => console.log('API subiu rodando na porta ' + PORT + '.'));
