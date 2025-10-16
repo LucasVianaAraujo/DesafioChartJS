@@ -117,7 +117,7 @@ export default function BarChart() {
 
     // renderização do gráfico
     const data = {
-        labelcd : arrInscricoes.map(item => item.x),
+        labelcd: arrInscricoes.map(item => item.x),
         datasets: [
             {
                 label: "Dataset1",
@@ -134,21 +134,21 @@ export default function BarChart() {
                     '#0463bdff',
                     '#0463bdff',
                     '#87C2FA',
-                    '#fa8f87ff',
-                    '#fa8f87ff',
-                    '#fa8f87ff',
-                    '#fa8f87ff',
-                    '#fa8f87ff',
-                    '#fa8f87ff',
-                    '#fa8f87ff',
-                    '#fa8f87ff',
-                    '#fa8f87ff',
-                    '#fa8f87ff',
-                    '#fa8f87ff',
-                    '#fa8f87ff',
-                    '#fa8f87ff',
-                    '#fa8f87ff',
-                    '#fa8f87ff'
+                    '#c74e46ff',
+                    '#c74e46ff',
+                    '#c52c21ff',
+                    '#c52c21ff',
+                    '#c52c21ff',
+                    '#c52c21ff',
+                    '#f8fa87ff',
+                    '#f8fa87ff',
+                    '#87f6faff',
+                    '#87f6faff',
+                    '#87f6faff',
+                    '#b1fa87ff',
+                    '#b1fa87ff',
+                    '#b1fa87ff',
+                    '#b1fa87ff'
                 ],
                 parsing: {
                     xAxisKey: 'x',
