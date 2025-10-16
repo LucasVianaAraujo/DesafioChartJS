@@ -117,11 +117,39 @@ export default function BarChart() {
 
     // renderização do gráfico
     const data = {
+        labelcd : arrInscricoes.map(item => item.x),
         datasets: [
             {
-                label: "Incrições 2025",
+                label: "Dataset1",
                 data: arrInscricoes,
-                backgroundColor: '#87C2FA',
+                backgroundColor: [
+                    '#d4a628ff',
+                    '#d4a628ff',
+                    '#25a368ff',
+                    '#25a368ff',
+                    '#a15cc9ff',
+                    '#a15cc9ff',
+                    '#25a368ff',
+                    '#25a368ff',
+                    '#0463bdff',
+                    '#0463bdff',
+                    '#87C2FA',
+                    '#fa8f87ff',
+                    '#fa8f87ff',
+                    '#fa8f87ff',
+                    '#fa8f87ff',
+                    '#fa8f87ff',
+                    '#fa8f87ff',
+                    '#fa8f87ff',
+                    '#fa8f87ff',
+                    '#fa8f87ff',
+                    '#fa8f87ff',
+                    '#fa8f87ff',
+                    '#fa8f87ff',
+                    '#fa8f87ff',
+                    '#fa8f87ff',
+                    '#fa8f87ff'
+                ],
                 parsing: {
                     xAxisKey: 'x',
                     yAxisKey: 'y'

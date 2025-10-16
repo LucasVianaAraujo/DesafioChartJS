@@ -28,4 +28,28 @@ endpoint.get('/RenderizarIncricoes', async (req, resp) => {
     }
 })
 
+endpoint.get('/RenderizarInscricoes', async (req, resp) => {
+    try {
+        const registro = await NovaInscricao.aggregate([
+            { $group: { _id: null, total: { $sum: "$totalAgendamentos" } } }
+        ]);
+
+        const TotalMatricula = registro.length > 0 ? registro[0].total : 0;
+
+        resp.json({ TotalMatricula });
+    } catch (err) {
+        console.log({ erro: err });
+    }
+});
+
+endpoint.get('/DiaComMaisInscricoes', async (req, resp) => {
+    const registro = await NovaInscricao.aggregate([
+        { $group: { _id: "$date", total: { $sum: "$totalAgendamentos" } } },
+        { $sort: { total: -1 } },
+        { $limit: 1 }
+    ]);
+
+    resp.json(registro[0]);
+});
+
 export default endpoint;

@@ -1,3 +1,5 @@
+import './index.scss'
+
 import { useEffect, useState } from 'react';
 
 import { Line } from 'react-chartjs-2';
@@ -49,7 +51,7 @@ export default function () {
             }
         }
         Renderizar();
-    }, [arrInscricoes])
+    }, [])
 
     // renderização do gráfico
     const data = {
@@ -91,7 +93,7 @@ export default function () {
     };
 
     return (
-        <div>
+        <div className='Line'>
             <Line data={data} options={chartOption} />
         </div>
     )
